@@ -5,7 +5,7 @@ use Filament\Infolists\Infolist;
 use Money\Currencies\ISOCurrencies;
 use Money\Currency;
 
-trait hasMoneyAttributes
+trait HasMoneyAttributes
 {
     protected Currency $currency;
     protected string $locale = 'sv_SE';

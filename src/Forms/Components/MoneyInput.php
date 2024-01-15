@@ -7,12 +7,12 @@ use Money\Currencies\ISOCurrencies;
 use Money\Formatter\IntlMoneyFormatter;
 use Money\Money;
 use NumberFormatter;
-use Pelmered\FilamentMoneyField\hasMoneyAttributes;
+use Pelmered\FilamentMoneyField\HasMoneyAttributes;
 use Pelmered\FilamentMoneyField\MoneyFormatter;
 
 class MoneyInput extends TextInput
 {
-    use hasMoneyAttributes;
+    use HasMoneyAttributes;
 
     protected function setUp(): void
     {
