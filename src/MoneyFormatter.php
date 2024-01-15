@@ -14,7 +14,6 @@ class MoneyFormatter
         $numberFormatter = new NumberFormatter($locale, NumberFormatter::CURRENCY);
 
         $numberFormatter->setAttribute(NumberFormatter::FRACTION_DIGITS, 2);
-        //$numberFormatter->setSymbol(\NumberFormatter::CURRENCY_SYMBOL, $currency);
 
         $moneyFormatter = new IntlMoneyFormatter($numberFormatter, $currencies);
 

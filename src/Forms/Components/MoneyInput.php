@@ -19,20 +19,11 @@ class MoneyInput extends TextInput
         parent::setUp();
 
         $this->prefix(MoneyFormatter::getCurrencySymbol($this->getCurrency(), $this->getLocale()));
-
         $this->integer();
-        /*
-        $this->inputMode('numeric');
-        $this->rule('numeric');
-        $this->step(1);
-        */
+
         $this->minValue = 0;
 
-
-
         $this->afterStateHydrated(static function (MoneyInput $component, $state): string {
-
-            ray($component->locale, $component->currency, $state)->green();
             $currencies = new ISOCurrencies();
             $numberFormatter = new NumberFormatter($component->locale, NumberFormatter::CURRENCY);
             $moneyFormatter = new IntlMoneyFormatter($numberFormatter, $currencies);
