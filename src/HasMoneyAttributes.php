@@ -8,7 +8,7 @@ use Money\Currency;
 trait HasMoneyAttributes
 {
     protected Currency $currency;
-    protected string $locale = 'sv_SE';
+    protected string $locale = 'pt_BR';
 
     protected function getCurrency(): Currency
     {
